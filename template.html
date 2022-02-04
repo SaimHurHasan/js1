@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+   #wrapper {
+padding: 260px;
+   }
+   #l1 {
+       margin-bottom: 35px;
+
+   }
+   #l1 #length {
+       border: 2px solid black;
+       border-radius: 5px;
+       padding: 7px 117px 13px 14px;
+   }
+   #b1 {
+       margin-top:35px;
+       margin-left: 4px;
+   }
+   #b1 #width {
+       border: 2px solid black;
+       border-radius: 5px;
+       padding: 7px 117px 13px 14px;
+   }
+   #s1 #submit {
+    margin: 37px 58px 50px 129px;
+    border: 2px solid black;
+    padding: 12px 13px 9px 18px;
+    text-align: center;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: lightgray;
+
+   }
+#resultp {
+    margin-top: 10px;
+}
+    </style>
+    <script>
+        function areaandperimeter() {
+            var l=parseInt(document.getElementById('length').value);
+            var d=parseInt(document.getElementById('width').value);
+            var area = l*d;
+            var perimeter= 2*(l+d);
+            document.getElementById('resulta').innerHTML='Area is'+' ' +area+' '+ 'sq. mtr.';
+            document.getElementById('resultp').innerHTML='Perimeter is'+' ' +perimeter+' ' +'sq. mtr';
+
+
+        }
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="l1">
+        <label for="length">Length of Rectangle<input id ="length" name="Length"> mtr</label></div>
+        <div id="b1"><label for="width">Width of Rectangle<input id ="width" name="Length"> mtr</label></div>
+           <div id="s1">  <input type="button" id="submit" onclick="areaandperimeter()" value="Calculate Area & Perimeter"></div>
+            <div id="resulta"></div>
+            <div id="resultp"></div>
+    </div>
+
+</body>
+</html>
